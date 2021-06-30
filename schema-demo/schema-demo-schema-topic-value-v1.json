@@ -1,0 +1,18 @@
+{
+  "$id": "http://example.com/myURI.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "description": "Schema for person data demo.",
+  "properties": {
+    "Age": {
+      "description": "User age",
+      "type": "integer"
+    },
+    "Name": {
+      "description": "Name of the user",
+      "type": "string"
+    }
+  },
+  "title": "PersonRecord",
+  "type": "object"
+}
