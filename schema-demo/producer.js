@@ -13,7 +13,7 @@ const registry = new SchemaRegistry({
 
 
 const kafka = new Kafka({
-    clientId: config.clientConfig.clientId,
+    clientId: config.clientConfig.producerId,
     brokers: config.kafka.brokers,
     ssl: true,
     sasl: {

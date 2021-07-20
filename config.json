@@ -1,0 +1,20 @@
+{
+    "kafka": {
+        "brokers": [
+            "pkc-4j8dq.southeastasia.azure.confluent.cloud:9092"
+        ],
+        "username": "GCMSUVUY2UPA23CP",
+        "password": "/GDFqoLLZMTpq/VcxwF4jGX6jW1hnhz+aXUG5FtuiEy2KPCDDhRKRQ3W69YiGbWk"
+    },
+    "schemaRegistry": {
+        "host": "https://psrc-pg3n2.westus2.azure.confluent.cloud",
+        "username": "XG3V6CTNZVWQHF6R",
+        "password": "LN93iSkicW2NMuVX8reDyKqeKDUi6qoH92posb6Ujv8pmuUyAYICC+NKcAwR06gH"
+    },
+    "clientConfig": {
+        "consumerId": "nsilpan-consumer-id",
+        "producerId": "nsilpan-producer-id",
+        "groupId": "nsilpan-group2-id",
+        "topic": "orders"
+    }
+}

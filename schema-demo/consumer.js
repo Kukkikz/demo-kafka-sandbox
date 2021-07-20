@@ -13,7 +13,7 @@ const registry = new SchemaRegistry({
 
 
 const kafka = new Kafka({
-    clientId: config.clientConfig.clientId,
+    clientId: config.clientConfig.consumerId,
     brokers: config.kafka.brokers,
     ssl: true,
     sasl: {
@@ -47,4 +47,3 @@ const main = async () => {
 main().catch(error => {
     console.error(error)
 })
-
