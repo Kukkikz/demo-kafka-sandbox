@@ -13,7 +13,7 @@ const registry = new SchemaRegistry({
 
 
 const kafka = new Kafka({
-    clientId: 'kik-test-app',
+    clientId: config.clientConfig.clientId,
     brokers: config.kafka.brokers,
     ssl: true,
     sasl: {
@@ -35,7 +35,7 @@ const main = async () => {
     if (schema.isValid(payload)) {
         await producer.connect();
         await producer.send({
-            topic: 'demo-schema-topic',
+            topic: config.clientConfig.topic,
             messages: [
                 { value: await registry.encode(100002, payload) },
             ],
