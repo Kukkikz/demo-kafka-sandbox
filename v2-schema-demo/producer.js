@@ -10,10 +10,8 @@ const registry = new SchemaRegistry({
     },
 })
 
-
-
 const kafka = new Kafka({
-    clientId: 'kik-test-app',
+    clientId: 'demo-producer',
     brokers: config.kafka.brokers,
     ssl: true,
     sasl: {
@@ -26,18 +24,25 @@ const kafka = new Kafka({
 const producer = kafka.producer()
 
 const main = async () => {
-    const schema = await registry.getSchema(100002);
+    const schema = await registry.getSchema(100015);
     const payload = {
-        Name: 'Max',
-        Age: 22
+        eventType: 'newCustomer',
+        data: {
+            id: '1002',
+            name: 'John Smith',
+            address: '123 ABC Street',
+            companyName: 'Test Company',
+            email: 'test@test.com',
+            region: 'AP'
+        }
     };
 
     if (schema.isValid(payload)) {
         await producer.connect();
         await producer.send({
-            topic: 'demo-schema-topic',
+            topic: 'demo-customer-data',
             messages: [
-                { value: await registry.encode(100002, payload) },
+                { value: await registry.encode(100015, payload) },
             ],
         })
 

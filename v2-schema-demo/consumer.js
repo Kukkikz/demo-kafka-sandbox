@@ -11,7 +11,7 @@ const registry = new SchemaRegistry({
 })
 
 const kafka = new Kafka({
-    clientId: 'kik-test-app',
+    clientId: 'demo-consumer',
     brokers: config.kafka.brokers,
     ssl: true,
     sasl: {
@@ -25,7 +25,7 @@ const consumer = kafka.consumer({ groupId: 'demo-schema-group' })
 
 const main = async () => {
     await consumer.connect()
-    await consumer.subscribe({ topic: 'demo-schema-topic', fromBeginning: true })
+    await consumer.subscribe({ topic: 'demo-customer-data', fromBeginning: true })
 
 
     await consumer.run({

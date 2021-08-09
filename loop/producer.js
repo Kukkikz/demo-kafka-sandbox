@@ -1,5 +1,5 @@
 const { Kafka } = require('kafkajs')
-const config = require('./config.json');
+const config = require('../config.json');
 
 const kafka = new Kafka({
     clientId: 'kik-test-app',
@@ -20,18 +20,33 @@ const main = async () => {
         console.log('Message not found')
     } else {
         await producer.connect()
+
+        let count = 0;
         
-        await producer.send({
-            topic: 'demo-topic',
-            messages: [
-                { value: message }
-            ],
-        })
+        while(true) {
+            let msg = message + " " + count
+            await producer.send({
+                topic: 'demo-topic',
+                messages: [
+                    { value: msg }
+                ],
+            })
+            console.log("data sent", count)
+            await sleep(5000)
+            count++
+        }
+        
 
         await producer.disconnect()
         
     }
 }
+
+const sleep = async (ms) => {
+    return new Promise((resolve) => {
+      setTimeout(resolve, ms);
+    });
+  }
 
 main().catch(error => {
     console.error(error)

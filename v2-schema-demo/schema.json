@@ -1,0 +1,46 @@
+{
+  "doc": "Sample schema to help you get started.",
+  "fields": [
+    {
+      "name": "eventType",
+      "type": "string"
+    },
+    {
+      "name": "data",
+      "type": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "address",
+            "type": "string"
+          },
+          {
+            "name": "companyName",
+            "type": "string"
+          },
+          {
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "default": "NA",
+            "name": "region",
+            "type": "string"
+          }
+        ],
+        "name": "customerDetail",
+        "type": "record"
+      }
+    }
+  ],
+  "name": "DemoCustomerData",
+  "namespace": "com.mycorp.mynamespace",
+  "type": "record"
+}

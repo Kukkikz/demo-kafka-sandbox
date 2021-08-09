@@ -1,5 +1,5 @@
 const { Kafka } = require('kafkajs')
-const config = require('./config.json');
+const config = require('../config.json');
 
 const kafka = new Kafka({
     clientId: 'kik-test-app',
@@ -23,8 +23,10 @@ const main = async () => {
         console.log({
         value: message.value.toString(),
         })
+        console.log("send log to azure 2")
     },
     })
+    console.log("send log to azure")
 }
 
 main().catch( error => {
