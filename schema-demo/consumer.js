@@ -26,6 +26,7 @@ const kafka = new Kafka({
 const consumer = kafka.consumer({ groupId: config.clientConfig.groupId })
 
 const main = async () => {
+    //process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
     await consumer.connect()
     await consumer.subscribe({ topic: config.clientConfig.topic, fromBeginning: true })
 

@@ -26,6 +26,7 @@ const kafka = new Kafka({
 const producer = kafka.producer()
 
 const main = async () => {
+    //process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
     const schema = await registry.getSchema(100002);
     const payload = {
         Name: 'John',

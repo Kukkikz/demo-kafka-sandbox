@@ -1,7 +1,7 @@
 {
     "kafka": {
         "brokers": [
-            "pkc-4j8dq.southeastasia.azure.confluent.cloud:9092"
+            "test.evtsd.exxonmobil.com:9092"
         ],
         "username": "GCMSUVUY2UPA23CP",
         "password": "/GDFqoLLZMTpq/VcxwF4jGX6jW1hnhz+aXUG5FtuiEy2KPCDDhRKRQ3W69YiGbWk"
