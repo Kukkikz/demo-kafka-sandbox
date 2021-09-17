@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@asyncapi/avro-schema-parser": "^0.3.0",
+    "@asyncapi/parser": "^1.7.0",
     "@kafkajs/confluent-schema-registry": "^3.0.1",
     "kafkajs": "^1.15.0"
   }

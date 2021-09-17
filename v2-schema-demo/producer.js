@@ -37,21 +37,31 @@ const main = async () => {
         }
     };
 
-    if (schema.isValid(payload)) {
-        await producer.connect();
-        await producer.send({
-            topic: 'demo-customer-data',
-            messages: [
-                { value: await registry.encode(100015, payload) },
-            ],
-        })
+    // if (schema.isValid(payload)) {
+    //     await producer.connect();
+    //     await producer.send({
+    //         topic: 'demo-customer-data',
+    //         messages: [
+    //             { value: await registry.encode(100015, payload) },
+    //         ],
+    //     })
 
-        await producer.disconnect()
-    } else {
-        console.log('Payload is not valid');
-    }
+    //     await producer.disconnect()
+    // } else {
+    //     console.log('Payload is not valid');
+    // }
 
+    await producer.connect()
 
+    await producer.send({
+        topic: 'demo-customer-data',
+        messages: [
+            { value: JSON.stringify(payload) }
+        ],
+    })
+    console.log('test');
+
+    await producer.disconnect()
 
 
 
