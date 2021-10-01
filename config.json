@@ -3,13 +3,13 @@
         "brokers": [
             "test.evtsd.exxonmobil.com:9092"
         ],
-        "username": "GCMSUVUY2UPA23CP",
-        "password": "/GDFqoLLZMTpq/VcxwF4jGX6jW1hnhz+aXUG5FtuiEy2KPCDDhRKRQ3W69YiGbWk"
+        "username": "U3YEW3T5MZA6AZ3W",
+        "password": "6deKamhHXTRCBMp+s4QTWOxWlduHxSu4+EtT6PUS1xWU199RqsKWFwficAzHrget"
     },
     "schemaRegistry": {
         "host": "https://psrc-pg3n2.westus2.azure.confluent.cloud",
-        "username": "XG3V6CTNZVWQHF6R",
-        "password": "LN93iSkicW2NMuVX8reDyKqeKDUi6qoH92posb6Ujv8pmuUyAYICC+NKcAwR06gH"
+        "username": "G424G7TGLADXOG26",
+        "password": "FWEs9kTwjyCJfJRjsH8f2Yu1RK7PYMkGyIOu9e326tUTW2HnK9ExRjgSqWKWQiXT"
     },
     "clientConfig": {
         "consumerId": "nsilpan-consumer-id",
